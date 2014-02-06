@@ -21,6 +21,7 @@ Dependencies
 ------------
 
 Only that you have tried using OpenJDK first.
+Also you need python module pycurl installed.
 
 License
 -------

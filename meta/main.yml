@@ -10,6 +10,10 @@ galaxy_info:
       versions:
         - precise
         - saucy
+    - name: Debian
+      versions:
+        - wheezy
+        - squeeze
   categories:
     - system
     - web
