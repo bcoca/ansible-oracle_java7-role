@@ -4,7 +4,7 @@ galaxy_info:
   description: oracle-java7
   company:
   license: GPLv2
-  min_ansible_version: 1.5
+  min_ansible_version: 1.6
   platforms:
     - name: Ubuntu
       versions:
