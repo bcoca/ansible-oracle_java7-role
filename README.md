@@ -1,4 +1,4 @@
-Role Name
+oracle_java7
 ========
 
 This role installs the official Oracle java7
