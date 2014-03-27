@@ -11,11 +11,11 @@ This role requires the debconf module for Debian derived distros (included in th
 Role Variables
 --------------
 
-Only 1 var that you should override if you need a specific version, the default is as follows:
+Only 1 var that you should override if you need a specific version, the default is as follows
 
-oracle_packages:
-    - oracle-java7-installer
-    - oracle-java7-set-default
+    oracle_packages:
+        - oracle-java7-installer
+        - oracle-java7-set-default
 
 Dependencies
 ------------
