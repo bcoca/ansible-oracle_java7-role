@@ -15,7 +15,7 @@
       when: ansible_distribution in [ 'Debian' ]
 
     - name: Accept Oracle license
-      debconf: name="{{oracle_installer_key}} oracle-java7-installer" question='shared/{{oracle_license_key}}' value='true' vtype='select'
+      debconf: name="{{oracle_installer_key}}" question='shared/{{oracle_license_key}}' value='true' vtype='select'
 
     - name: Install packages
       apt: name={{item}} state=present update_cache=yes
