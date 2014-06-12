@@ -1,21 +1,21 @@
     - name: Setup oracle java deb repo
       apt_repository: repo="ppa:webupd8team/java" update_cache=yes
-      when: ansible_distribution in [ 'Ubuntu' ] 
-      
+      when: ansible_distribution in [ 'Ubuntu' ]
+
     - name: Add webupd8 repo apt-key
       apt_key: url=http://keyserver.ubuntu.com:11371/pks/lookup?op=get&search=0xC2518248EEA14886 state=present
-      when: ansible_distribution in [ 'Debian' ] 
-  
+      when: ansible_distribution in [ 'Debian' ]
+
     - name: Add webupd8 repository on Debian
       apt_repository: repo='deb http://ppa.launchpad.net/webupd8team/java/ubuntu precise main' state=present
-      when: ansible_distribution in [ 'Debian' ] 
-    
+      when: ansible_distribution in [ 'Debian' ]
+
     - name: Add webupd8 repository (src) on Debian
       apt_repository: repo='deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu precise main' state=present
-      when: ansible_distribution in [ 'Debian' ] 
+      when: ansible_distribution in [ 'Debian' ]
 
     - name: Accept Oracle license
-      debconf: name="oracle-java7-installer" question='shared/accepted-oracle-license-v1-1' value='true' vtype='select'
+      debconf: name="{{oracle_installer_key}} oracle-java7-installer" question='shared/{{oracle_license_key}}' value='true' vtype='select'
 
     - name: Install packages
       apt: name={{item}} state=present update_cache=yes
