@@ -1,7 +1,7 @@
 oracle_java7
 ========
 
-This role installs the official Oracle java7
+This role installs the official Oracle java
 
 Requirements
 ------------
@@ -11,11 +11,15 @@ This role requires the debconf module for Debian derived distros (included in th
 Role Variables
 --------------
 
-Only 1 var that you should override if you need a specific version, the default is as follows
+A few vars you can override now, it should even be possible to install java8.
 
     oracle_packages:
         - oracle-java7-installer
         - oracle-java7-set-default
+
+    oracle_installer_key: oracle-java7-installer
+    oracle_license_key: accepted-oracle-license-v1-1
+
 
 Dependencies
 ------------
